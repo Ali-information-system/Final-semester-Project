@@ -1,31 +1,29 @@
-// Check the current page and add relevant event listeners
 document.addEventListener("DOMContentLoaded", () => {
-    // Check if on the Sign-Up page
+    // Sign-Up Page Logic
     if (document.title === "Sign Up") {
-        const signUpForm = document.querySelector("form");
+        const signUpForm = document.getElementById("signupForm");
         signUpForm.addEventListener("submit", (event) => {
             event.preventDefault();
-            alert("Sign up successful! Redirecting to login page...");
-            window.location.href = "login.html"; // Redirect to Login page
+            alert("Sign up successful! Redirecting to Login page...");
+            window.location.href = "login.html";
         });
     }
 
-    // Check if on the Login page
+    // Login Page Logic
     if (document.title === "Login") {
-        const loginForm = document.querySelector("form");
+        const loginForm = document.getElementById("loginForm");
         loginForm.addEventListener("submit", (event) => {
             event.preventDefault();
-            alert("Login successful! Redirecting to homepage...");
-            window.location.href = "homepage.html"; // Redirect to Homepage
+            alert("Login successful! Redirecting to Homepage...");
+            window.location.href = "homepage.html";
         });
     }
 
-    // Check if on the Homepage
+    // Homepage Logic
     if (document.title === "Grocery Application") {
         const addButton = document.getElementById("add-button");
         addButton.addEventListener("click", () => {
             alert("Add functionality coming soon!");
-            // Simulate an action here, like showing an input to add items
         });
     }
 });
